@@ -1,0 +1,15 @@
+{
+    "name": "node-api",
+    "version": "1.0.0",
+    "description": "Node api for getting tshirt data",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon ."
+    },
+    "author": "Rahulbaran",
+    "license": "MIT",
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
