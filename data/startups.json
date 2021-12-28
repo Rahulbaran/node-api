@@ -1,0 +1,132 @@
+[
+    {
+        "id": 0,
+        "name": "BYJU's",
+        "Industry": "Edtech",
+        "Founders": ["Byju Raveendran", "Divya Gokulnath"],
+        "Founding Year": 2011,
+        "HQ": "Bengaluru, India",
+        "CEO": "Byju Raveendran",
+        "Valuation(In Billion $)": 21
+    },
+    {
+        "id": 1,
+        "name": "Unacademy",
+        "Industry": "Edtech",
+        "Founders": ["Gaurav Munjal", "Roman Saini", "Hamesh Singh"],
+        "Founding Year": 2015,
+        "HQ": "Bengaluru, India",
+        "CEO": "Roman Saini",
+        "Valuation(In Billion $)": 3
+    },
+    {
+        "id": 2,
+        "name": "Meesho",
+        "Industry": "E-Commerce",
+        "Founders": ["Vidit Aatrey", "Sanjeev Baranwal"],
+        "Founding Year": 2015,
+        "HQ": "Bengaluru, India",
+        "CEO": "Vidit Aatrey",
+        "Valuation(In Billion $)": 5
+    },
+    {
+        "id": 3,
+        "name": "Digit Insurance",
+        "Industry": "Fintech",
+        "Founders": ["Kamesh Goyal", "Prem Watsa"],
+        "Founding Year": 2016,
+        "HQ": "Bengaluru, India",
+        "CEO": "Kamesh Goyal",
+        "Valuation(In Billion $)": 1.9
+    },
+    {
+        "id": 4,
+        "name": "PharmEasy",
+        "Industry": "B2C",
+        "Founders": ["Dharmil Sheth", "Dr. Dhaval Shah", "Siddharth Shah"],
+        "Founding Year": 2014,
+        "HQ": "Mumbai, India",
+        "CEO": "Dharmil Sheth",
+        "Valuation(In Billion $)": 5
+    },
+    {
+        "id": 5,
+        "name": "CRED",
+        "Industry": "Fintech",
+        "Founders": ["Kunal Shah"],
+        "Founding Year": 2018,
+        "HQ": "Bengaluru, India",
+        "CEO": "Kunal Shah",
+        "Valuation(In Billion $)": 5.5
+    },
+    {
+        "id": 6,
+        "name": "Groww",
+        "Industry": "Fintech",
+        "Founders": [
+            "Lalit Keshre",
+            "Neeraj Singh",
+            "Harsh Jain",
+            "Ishan Bansal"
+        ],
+        "Founding Year": 2016,
+        "HQ": "Bengaluru, India",
+        "CEO": "Lalit Keshre",
+        "Valuation(In Billion $)": 3
+    },
+    {
+        "id": 7,
+        "name": "ShareChat",
+        "Industry": "Social Media",
+        "Founders": ["Ankush Sachdeva", "Bhanu Pratap", "Farid Ahsan"],
+        "Founding Year": 2015,
+        "HQ": "Bengaluru, India",
+        "CEO": "Ankush Sachdeva",
+        "Valuation(In Billion $)": 5
+    },
+    {
+        "id": 8,
+        "name": "Blinkit",
+        "Industry": "E-Commerce",
+        "Founders": ["Albinder Dhindsa"],
+        "Founding Year": 2013,
+        "HQ": "Gurugram, Haryana India",
+        "CEO": "Albinder Dhindsa",
+        "Valuation(In Billion $)": 1
+    },
+    {
+        "id": 9,
+        "name": "Cars24",
+        "Industry": "D2C",
+        "Founders": [
+            "Vikram Chopra",
+            "Gajendra Jangid",
+            "Ruchit Agarwal",
+            "Mehul Agarwal"
+        ],
+        "Founding Year": 2015,
+        "HQ": "Gurugram, Haryana India",
+        "CEO": "Vikram Chopra",
+        "Valuation(In Billion $)": 3.3
+    },
+    {
+        "id": 10,
+        "name": "Zepto",
+        "Industry": "E-Commerce",
+        "Founders": ["Aadit Palicha", "Kaivalya Vohra"],
+        "Founding Year": 2020,
+        "HQ": "Mumbai, India",
+        "CEO": "Aadit Palicha",
+        "Valuation(In Billion $)": 0.57
+    },
+    {
+        "id": 11,
+        "name": "Licious",
+        "industry": "D2C",
+        "Founders": ["Abhay Hanjura", "Vivek Gupta"],
+        "Founding Year": 2015,
+        "HQ": "Bengaluru, India",
+        "CEO": "Vivek Gupta",
+        "Valuation(In Billion $)": 1
+    }
+]
