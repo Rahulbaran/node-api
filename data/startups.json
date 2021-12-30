@@ -128,5 +128,15 @@
         "HQ": "Bengaluru, India",
         "CEO": "Vivek Gupta",
         "Valuation(In Billion $)": 1
+    },
+    {
+        "id": 12,
+        "name": "Unacademy",
+        "Industry": "Edtech",
+        "Founders": ["Gaurav Munjal", "Roman Saini", "Hamesh Singh"],
+        "Founding Year": 2015,
+        "HQ": "Bengaluru, India",
+        "CEO": "Roman Saini",
+        "Valuation(In Billion $)": 3
     }
 ]

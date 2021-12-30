@@ -5,22 +5,22 @@ import http from "http";
 import fs from "fs";
 import url from "url";
 
-//To laod all the environment variables
+//LOAD ALL THE ENVIRONMENT VARIABLES
 dotenv.config();
 
-//Create Server
+//CREATE A HTTP SERVER
 const server = http.createServer();
 
-//Reading startups.json file
+// 1) READ STARTUP JSON FILE AND STORE ITS DATA IN VARIABLE
 const startupsData = JSON.parse(
     fs.readFileSync(`./data/startups.json`, "utf-8")
 );
 
-//Routes
+// 2) ROUTES
 server.on("request", (req, res) => {
     const { pathname } = url.parse(req.url, true);
 
-    //route to get all the startups data (GET METHOD)
+    //ROUTE TO GET ALL THE STARTUPS DATA
     if (pathname === "/api/v1/startups" && req.method === "GET") {
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(
@@ -32,7 +32,7 @@ server.on("request", (req, res) => {
         );
     }
 
-    //route to get any startup data based on id provided
+    //ROUTE TO GET ANY STARTUP DATA BASED ON ID PROVIDED
     else if (
         pathname.match(/\/api\/v1\/startups\/([0-9]+)/) &&
         req.method === "GET"
@@ -40,7 +40,6 @@ server.on("request", (req, res) => {
         const id = pathname.split("/")[4] * 1;
         const startup = startupsData.find(ele => ele.id === id);
 
-        //If startup of mentioned does not exist
         if (!startup) {
             res.writeHead(404, { "Content-Type": "application/json" });
             return res.end(
@@ -61,7 +60,43 @@ server.on("request", (req, res) => {
         );
     }
 
-    //404 route
+    //ROUTE TO ADD NEW STARTUP DATA USING POST
+    else if (pathname === "/api/v1/startups" && req.method === "POST") {
+        req.on("data", chunk => {
+            const data = JSON.parse(chunk);
+            const newId = startupsData[startupsData.length - 1].id + 1;
+
+            const newStartup = Object.assign({ id: newId }, data);
+            startupsData.push(newStartup);
+
+            fs.writeFile(
+                `./data/startups.json`,
+                JSON.stringify(startupsData),
+                err => {
+                    if (err) {
+                        res.writeHead(404, {
+                            "Content-Type": "application/json"
+                        });
+                        return res.end(
+                            JSON.stringify({ status: "fail", code: 404 })
+                        );
+                    }
+                }
+            );
+            res.writeHead(201, { "Content-Type": "application/json" });
+            res.end(
+                JSON.stringify({
+                    status: "success",
+                    data: { startup: newStartup }
+                })
+            );
+        });
+        res.on("end", () => {
+            res.end();
+        });
+    }
+
+    //404 ROUTE
     else {
         res.writeHead(404, { "Content-Type": "application/json" });
         res.end(
@@ -74,7 +109,7 @@ server.on("request", (req, res) => {
     }
 });
 
-//Listen to given port
+// 3) START SERVER
 const PORT = process.env.PORT || 8080;
 server.listen(PORT, "localhost", () =>
     console.log(`Server is running on http://127.0.0.1:${PORT}`)
